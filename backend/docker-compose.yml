@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - MONGO_URI=mongodb://mongo:27017/reputechain
+      - JWT_SECRET=dockersecretkey
+      - JWT_EXPIRES_IN=1h
+      - JWT_REFRESH_SECRET=dockerrefreshsecretkey
+      - JWT_REFRESH_EXPIRES_IN=7d
+      - ETHEREUM_RPC_URL=http://your-rpc-url
+      - PRIVATE_KEY=0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+    depends_on:
+      - mongo
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
+  mongo:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:

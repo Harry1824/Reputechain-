@@ -1,0 +1,11 @@
+Sending POST /api/reputation/anchor
+ANCHOR SUCCESS: {
+  "message": "Reputation anchored to blockchain successfully",
+  "txHash": "0xd53fa68d2abae89add0df4105b2c7a909ff80ea7d5ae3886016d02daaa8a41e2",
+  "ipfsHash": "QmMTc3NDE5MjE5OTExMw",
+  "score": 40
+}
+Now Sending GET /api/reputation/attestation/0x1234567890abcdef1234567890abcdef12345678
+API ERROR: {
+  message: 'Failed to read on-chain attestation: deferred error during ABI decoding triggered accessing property "ipfsHash"'
+}

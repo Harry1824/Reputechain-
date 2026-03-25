@@ -1,0 +1,17 @@
+Sending POST /api/reputation/anchor
+ANCHOR SUCCESS: {
+  "message": "Reputation anchored to blockchain successfully",
+  "txHash": "0xbd75eabc1b8b573cf886bbe92981e8567571a40ade19a1c0eee7df556f7d6087",
+  "ipfsHash": "QmMTc3NDE5MjI4ODI3NQ",
+  "score": 40
+}
+Now Sending GET /api/reputation/attestation/0x1234567890abcdef1234567890abcdef12345678
+FETCH SUCCESS: {
+  "message": "Attestation fetched successfully",
+  "data": {
+    "score": 40,
+    "ipfsHash": "QmMTc3NDE5MjI4ODI3NQ",
+    "timestamp": 1774192288,
+    "issuer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+  }
+}
