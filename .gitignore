@@ -5,3 +5,6 @@ node_modules
 
 # Ignore unused folder as requested
 ish/
+
+# Ignore large executable files
+Antigravity.exe
